@@ -1,22 +1,23 @@
-# Методы агрегации эмбеддингов на основе метрик сходства текстовых репрезентаций
+# Embeddings Aggregation Techniques Based on Representational Similarity Measures
 
-Данный репозиторий содержит код к исследовательской работе на тему "Методы агрегации эмбеддингов на основе метрик сходства текстовых репрезентаций", выполненной в качестве ВКР.
+This repository contains the code for a research paper "Embeddings Aggregation Techniques Based on Representational Similarity Measures", which was my Bachelor's thesis.
 
-### Про код
+### About the code
 
-Для воспроизведения кода не требуется предварительной подготовки окружения или данных, все необходимые зависимости могут быть найдены в ноутбуках. Весь пайплайн разделен на четыре логические части:
+To reproduce the code, no preliminary preparation of the environment or data is required; all the necessary dependencies can be found in the notebooks. The entire pipeline is divided into four logical parts:
 
-1. Подсчет качества и метрик сходства на обучающей выборке. Данный ноутбук содержит подсчет качества на выбранной задаче бенчмарка MTEB для каждого из 12 слоев выбранной BERT-like модели, а также подсчет метрик сходства эмбеддингов между каждой парой слоев. В результате его выполнения становятся доступны два файла с соответствующими таблицами, которые позже используются для получения весов.
-2. Получение весов на основе метрик сходства. В этой части согласно описанному методу происходит подбор оптимальных весов для отдельных метрик сходства эмбеддингов, а также их комбинаций. Полученные веса сохраняются в файл.
-3. (Опционально) Получение оптимальных весов с помощью optuna. При наличии достаточного количества вычислительных ресурсов можно попробовать найти лучшие веса с помощью оптимизации посредством optuna.
-4. Тестирование полученных весов. В данном ноутбуке проводится замер качества на тестовой выборке комбинации, составленной с помощью весов из п.2-3.
+1. Calculation of quality and representational similarity measures on the training set. This notebook contains a quality calculation on the selected MTEB benchmark task for each of the 12 layers of the selected BERT-like model, as well as a calculation of embedding similarity metrics between each pair of layers. As a result of its execution, two files with corresponding tables become available, which are later used to obtain weights. 
+2. Calculating weights based on similarity measures. In this part, according to the described method, optimal weights are selected for individual embedding similarity metrics, as well as their combinations. The resulting weights are saved to a file. 
+3. (Optional) Obtaining optimal weights using optuna. If you have sufficient computing resources, you can try to find the optimal weights using optuna. 
+4. Testing of the acquired weights. In this laptop, the quality of the combination, compiled using the weights from points 2-3, is measured on a test set.
 
-Подробнее про данный метод можно прочитать в письменной работе.
 
-#### Выполнила:
-Августёнок Алина Алексеевна,
-группа БПМИ211 факультета компьютерных наук НИУ ВШЭ.
+#### Fulfilled by:
+Avgustyonok Alina Alekseevna \
+Student of the Group БПМИ211 \
+Faculty of Computer Science, HSE University
 
-#### Научный руководитель:
-Савченко Андрей Владимирович,
-д-р техн.наук, ведущий научный сотрудник ФКН НИУ ВШЭ.
+#### Project Supervisor:
+Savchenko Andrey Vladimirovich \
+Doctor of Technology, Senior Researcher \
+Faculty of Computer Science, HSE University
